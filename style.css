@@ -1,0 +1,30 @@
+    .cell {
+      display: inline-block;
+      width: 1em;
+      /* ancho fijo */
+      text-align: center;
+    }
+
+    body {
+      background: #111;
+      color: #fff;
+      font-family: monospace;
+      text-align: center;
+      padding: 20px;
+    }
+
+    pre {
+      font-size: 18px;
+      line-height: 1.2em;
+      margin: 20px auto;
+      white-space: pre;
+      display: inline-block;
+      background: #222;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    }
+
+    h2 {
+      color: #ff4d6d;
+    }
