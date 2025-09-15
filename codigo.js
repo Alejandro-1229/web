@@ -194,17 +194,21 @@ const FONT = {
   ],
 };
 
-const h1 = document.getElementById("h1");
-const hora = new Date();
+function actualizarMensaje() {
+  const h1 = document.getElementById("h1");
+  const hora = new Date().getHours();
 
-if (hora.getHours() == 23) {
-  h1.innerHTML = "💖 Duerme Bien preciosa!!! 🌞 💖";
-} else if (hora.getHours() == 6) {
-  h1.innerHTML = "💖 Que tengas un excelente día amor!!! 🌞 💖";
-} else if (hora.getHours() == 12) {
-  h1.innerHTML = "💖 Ten buena tarde Amor Mío!!! 🌞 💖";
+  if (hora >= 23 || hora < 6) {
+    h1.innerHTML = "💖 Duerme Bien preciosa!!! 🌙 💖";
+  } else if (hora >= 6 && hora < 12) {
+    h1.innerHTML = "💖 Que tengas un excelente día amor!!! 🌞 💖";
+  } else if (hora >= 12 && hora < 18) {
+    h1.innerHTML = "💖 Ten buena tarde Amor Mío!!! 🌤️ 💖";
+  } else {
+    h1.innerHTML = "💖 Que tengas una linda noche mi cielo!!! 🌆 💖";
+  }
+
 }
-
 
 
 function renderLetterMatrix(matrix, heart = HEART, space = SP) {
@@ -240,6 +244,7 @@ function renderWordAnimatedVertical(containerId, text, delay = 500) {
 
   showNextLetter();
 }
+
 
 
 
