@@ -196,12 +196,13 @@ const FONT = {
 
 const h1 = document.getElementById("h1");
 const hora = new Date();
-if(hora.getHours() == 23){
-  h1.innerHTML("💖 Duerme Bien preciosa!!! 🌞 💖")
-}else if(hora.getHours() == 6){
-  h1.innerHTML("💖 Que tengas un excelente día amor!!! 🌞 💖")
-}else if(hora.getHours() == 12){
-  h1.innerHTML("💖 Ten buena tarde Amor Mío!!! 🌞 💖")
+
+if (hora.getHours() == 23) {
+  h1.innerHTML = "💖 Duerme Bien preciosa!!! 🌞 💖";
+} else if (hora.getHours() == 6) {
+  h1.innerHTML = "💖 Que tengas un excelente día amor!!! 🌞 💖";
+} else if (hora.getHours() == 12) {
+  h1.innerHTML = "💖 Ten buena tarde Amor Mío!!! 🌞 💖";
 }
 
 
@@ -239,6 +240,7 @@ function renderWordAnimatedVertical(containerId, text, delay = 500) {
 
   showNextLetter();
 }
+
 
 
 
